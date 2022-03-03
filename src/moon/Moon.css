@@ -1,0 +1,525 @@
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #eeefea;
+  font-size: 16px;
+  line-height: 1;
+  overflow-x: hidden;
+}
+.menu {
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.menu > ul {
+  list-style: none;
+  width: 70%;
+  margin: 3% 15%;
+  font: 20px "Noto Sans KR";
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  float: left;
+  padding: 0;
+}
+.menu > ul > li {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  margin: left;
+}
+.menu > ul > li > a {
+  text-decoration: none;
+}
+.menu > ul > li > a:link,
+.menu > ul > li > button:link {
+  color: #17161b;
+}
+.menu > ul > li > a:hover,
+.menu > ul > li > button:active {
+  color: 7262ac;
+  text-shadow: 2px 2px 2px gray;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu {
+    display: inline-block;
+  }
+  .wide-menu {
+    display: none;
+  }
+}
+.title {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  color: rgb(41, 17, 59);
+  font: 5rem "Black Han Sans";
+  margin-top: 27rem;
+  z-index: 50;
+  text-shadow: 0.5rem 0.5rem 0.5rem gray;
+}
+
+* {
+  box-sizing: border-box;
+}
+.rabbit_rocket {
+  position: absolute;
+  height: 21rem;
+  width: 21rem;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.circle_control {
+  position: absolute;
+  background-color: initial;
+  cursor: default;
+  appearance: auto;
+  opacity: 0;
+  box-sizing: border-box;
+  padding: initial;
+  border: initial;
+}
+.circle_control:checked + label {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  background-color: rgb(35, 16, 51);
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.fron {
+  transform: translateZ(0.25rem);
+}
+.rabbit_rocket * {
+  position: absolute;
+}
+
+.moon {
+  width: 8rem;
+  height: 8rem;
+  left: 14rem;
+  z-index: 80;
+  border-radius: 100%;
+  background: rgb(255, 168, 39);
+  box-shadow: inset 0.5rem -1rem 0.1rem 0rem rgb(187, 122, 30);
+}
+.moon * {
+  position: absolute;
+}
+
+.crater1 {
+  width: 1.4em;
+  height: 1.4rem;
+  top: 2rem;
+  left: 1.6rem;
+  z-index: 100;
+  border-radius: 100%;
+  background: rgb(216, 126, 37);
+}
+.crater2 {
+  width: 1.7em;
+  height: 1.7rem;
+  top: 1.6rem;
+  left: 5.5rem;
+  z-index: 100;
+  border-radius: 100%;
+  background: rgb(216, 126, 37);
+}
+
+.crater3 {
+  width: 0.8em;
+  height: 0.8rem;
+  top: 3.4rem;
+  left: 4rem;
+  z-index: 100;
+  border-radius: 100%;
+  background: rgb(216, 126, 37);
+}
+
+.crater4 {
+  width: 1em;
+  height: 1rem;
+  top: 5rem;
+  left: 1.5rem;
+  z-index: 100;
+  border-radius: 100%;
+  background: rgb(216, 126, 37);
+}
+
+.crater5 {
+  width: 0.6em;
+  height: 0.6rem;
+  top: 5rem;
+  left: 7rem;
+  z-index: 100;
+  border-radius: 100%;
+  background: rgb(216, 126, 37);
+}
+.crater6 {
+  width: 1.2em;
+  height: 1.2rem;
+  top: 5.5rem;
+  left: 6rem;
+  z-index: 100;
+  border-radius: 100%;
+  background: rgb(216, 126, 37);
+}
+.crater7 {
+  width: 1.2em;
+  height: 1.2rem;
+  top: 5.5rem;
+  left: 3.5rem;
+  z-index: 100;
+  border-radius: 100%;
+  background: rgb(216, 126, 37);
+}
+
+.rabbit {
+  z-index: 100;
+  left: 14rem;
+  top: 10.5rem;
+  background-color: #8ad7f8;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 100%;
+  transform: rotate(-45deg);
+  overflow: hidden;
+}
+.rabbit_head {
+  right: 37%;
+  top: 16%;
+  height: 6rem;
+  width: 3rem;
+}
+
+.rabbit_face {
+  border-radius: 100% 0% 0% 100% / 50%;
+  background-color: white;
+  transform: rotate(90deg);
+  inset: 0;
+}
+
+.rabbit_head::before {
+  content: "";
+  border-radius: 30rem;
+  background-color: white;
+  width: 6.7rem;
+  height: 4rem;
+  top: 3rem;
+  left: -1.6rem;
+  position: absolute;
+}
+.rabbit_face * {
+  transform: rotate(-90deg);
+}
+
+.rabbit_eye {
+  width: 0.5rem;
+  height: 0.6rem;
+  background-color: rgb(36, 32, 32);
+  border-radius: 100%;
+}
+.rabbit_left_eye {
+  top: 3.5rem;
+  left: 2rem;
+}
+
+.rabbit_right_eye {
+  z-index: 10000;
+  bottom: 4.5rem;
+  left: 2rem;
+}
+
+.rabbit_mouse {
+  width: 0.4rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  left: 3rem;
+  bottom: 3rem;
+  transform: rotate(180deg);
+}
+.rabbit_mouse::after {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgb(253, 144, 141);
+  transform: rotate(225deg);
+  border-radius: 0.6rem;
+  clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+  position: absolute;
+  left: -0.2rem;
+  top: -0.1rem;
+}
+.rabbit_cheek {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 100%;
+  background-color: pink;
+}
+.rabbit_right_cheek {
+  left: 3rem;
+  top: 4rem;
+}
+
+.rabbit_left_cheek {
+  left: 3rem;
+  bottom: 4.5rem;
+}
+.rabbit_ear {
+  background-color: white;
+  width: 2.5rem;
+  height: 4rem;
+  border-radius: 100%;
+  transform: rotate(60deg);
+}
+.rabbit_left_ear {
+  top: 3rem;
+  left: -1.7rem;
+  z-index: -1;
+}
+.rabbit_right_ear {
+  top: 0rem;
+  left: -1.5rem;
+  z-index: 12;
+}
+
+.rabbit_body {
+  border-radius: 50rem;
+  width: 6rem;
+  height: 4.2rem;
+  top: 6rem;
+  right: -2.2rem;
+  background-color: white;
+  z-index: -1;
+}
+.rocket {
+  left: -2rem;
+  top: 4rem;
+  height: 5rem;
+  width: 6rem;
+  z-index: 2;
+  animation: mooving 5000ms ease-in-out infinite;
+}
+#star {
+  width: 18rem;
+  height: 18rem;
+  left: 10%;
+  top: 10%;
+  z-index: 2;
+  border-radius: 100%;
+  background-color: rgb(35, 16, 51);
+  overflow: hidden;
+}
+.shooting_star {
+  position: absolute;
+  height: 0.5rem;
+  width: 0rem;
+  z-index: 10;
+  border-radius: 100%;
+  background-color: rgb(231, 218, 143);
+  filter: drop-shadow(0 0 6px rgb(231, 218, 143));
+  animation: shooting 9000ms ease-in-out infinite,
+    shining 9000ms ease-in-out infinite;
+}
+
+.flame {
+  width: 9rem;
+  height: 20rem;
+  top: 13rem;
+  left: 8rem;
+  z-index: -2;
+  background: linear-gradient(white, transparent);
+  transform: rotate(45deg);
+}
+
+.back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  border-radius: 100%;
+  overflow: hidden;
+}
+.moon_back {
+  width: 20rem;
+  height: 20rem;
+  left: 1rem;
+  top: 14rem;
+  z-index: 100;
+  border-radius: 100%;
+  background: rgb(255, 168, 39);
+  box-shadow: inset 1rem 1rem 0.2rem 0rem rgb(187, 122, 30);
+}
+.moon_back * {
+  position: absolute;
+}
+.moon_back .crater1 {
+  top: 5rem;
+  left: 13rem;
+  width: 3rem;
+  height: 3rem;
+  box-shadow: inset 0.1rem 0.1rem 0.4rem 0rem rgb(121, 86, 37);
+}
+
+.moon_back .crater2 {
+  top: 4rem;
+  left: 10rem;
+  width: 2rem;
+  height: 2rem;
+  box-shadow: inset 0.1rem 0.1rem 0.4rem 0rem rgb(121, 86, 37);
+}
+
+.moon_back .crater4 {
+  top: 7rem;
+  left: 11rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  box-shadow: inset 0.1rem 0.1rem 0.4rem 0rem rgb(121, 86, 37);
+}
+.rabbit_back {
+  transform: scale(1.2);
+  transform: rotate(-10deg);
+  left: 8rem;
+  top: 7em;
+}
+.rabbit_back * {
+  position: absolute;
+}
+.rabbit-chest {
+  height: 6rem;
+  width: 7.5rem;
+  top: 5rem;
+  right: -3rem;
+  z-index: -100;
+  background-color: #eeefea;
+  border-top-left-radius: 50% 80%;
+  border-top-right-radius: 50% 80%;
+  border-bottom-right-radius: 50% 20%;
+  border-bottom-left-radius: 50% 20%;
+}
+.rabbit_back .rabbit_hand {
+  height: 1.5rem;
+  width: 2rem;
+  background-color: #eeefea;
+  border-radius: 2rem;
+}
+.rabbit_back .rabbit_right_hand {
+  top: 5.5rem;
+  z-index: -2;
+  left: 1.2rem;
+  transform: rotate(-200deg);
+}
+
+.rabbit_back .rabbit_ear,
+.rabbit_back .rabbit_face,
+.rabbit_back .rabbit_head::before,
+.rabbit_back .rabbit_body {
+  background-color: #eeefea;
+}
+.flag_bar {
+  width: 0.4rem;
+  height: 10rem;
+  z-index: 3;
+  top: 5rem;
+  left: 11.5rem;
+  border-radius: 10rem;
+  background-color: lightgrey;
+  box-shadow: inset 0.15rem 0.1rem 0.1rem 0rem rgb(100, 100, 100);
+}
+.flag {
+  width: 6rem;
+  height: 4rem;
+  top: 5.2rem;
+  z-index: 2;
+  left: 11.8rem;
+  background-color: #eeefea;
+  box-shadow: 0.15rem 0.1rem 0.2rem 0rem rgb(100, 100, 100);
+}
+.coin {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+  left: 1.3rem;
+  top: 0.3rem;
+  border: 0.2rem solid gold;
+  background-color: goldenrod;
+  box-shadow: 0.15rem 0.1rem 0.2rem 0rem rgb(122, 95, 63);
+}
+.coin::after {
+  content: " ";
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  position: absolute;
+  left: 0.28rem;
+  top: 0.28rem;
+  background-color: gold;
+}
+.coin_text {
+  z-index: 100;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-weight: 1000;
+  font-size: 2.5rem;
+  color: rgb(44, 37, 27);
+  left: 0.8rem;
+  top: 0.15rem;
+}
+@keyframes shining {
+  0% {
+    height: 0;
+    width: 0;
+  }
+
+  50% {
+    height: 0.2rem;
+    width: 0.2rem;
+  }
+
+  100% {
+    height: 0.2rem;
+    width: 0.2rem;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translate(0rem, 0rem);
+  }
+
+  100% {
+    transform: translate(-60rem, 60rem);
+  }
+}
+
+@keyframes mooving {
+  0% {
+    transform: scale(0.45) translate(0rem, 0rem);
+  }
+
+  250% {
+    transform: scale(0.45) translate(1rem, 1rem);
+  }
+  50% {
+    transform: scale(0.45) translate(-1rem, 1rem);
+  }
+  75% {
+    transform: scale(0.45) translate(-1rem, -1em);
+  }
+  100% {
+    transform: scale(0.45) translate(-0rem, 0rem);
+  }
+}

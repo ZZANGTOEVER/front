@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Home from './home/Home';
 import Ctable from './ctable/ctable'
-
+import Moon from './moon/Moon';
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <Moon />
     <Ctable />
   </React.StrictMode>,
   document.getElementById('root')
