@@ -18,7 +18,7 @@
   list-style: none;
   width: 70%;
   margin: 3% 15%;
-  font: 20px "Noto Sans KR";
+  font: 1.5rem "Noto Sans KR";
   text-transform: uppercase;
   letter-spacing: 2.5px;
   float: left;
@@ -39,22 +39,13 @@
 }
 .menu > ul > li > a:hover,
 .menu > ul > li > button:active {
-  color: 7262ac;
-  text-shadow: 2px 2px 2px gray;
+  text-decoration: underline;
 }
 
 .mobile-menu {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .mobile-menu {
-    display: inline-block;
-  }
-  .wide-menu {
-    display: none;
-  }
-}
 .title {
   width: 100%;
   position: absolute;
@@ -64,6 +55,17 @@
   margin-top: 27rem;
   z-index: 50;
   text-shadow: 0.5rem 0.5rem 0.5rem gray;
+}
+@media screen and (max-width: 768px) {
+  .mobile-menu {
+    display: inline-block;
+  }
+  .wide-menu {
+    display: none;
+  }
+  .title {
+    margin-top: 35rem;
+  }
 }
 
 * {
